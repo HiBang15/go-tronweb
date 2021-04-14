@@ -2,13 +2,25 @@ package go_tronweb
 
 import "fmt"
 
-const accountBasePath = "accounts"
+const getAccountBasePath = "wallet/getaccount"
+const createAccountBasePath = "wallet/createaccount"
+
+//type GetAccountResponse struct {
+//	AccountName     string      `json:"account_name"`
+//	Address         string      `json:"address"`
+//	Balance         int         `json:"balance"`
+//	AccountResource interface{} `json:"account_resource"`
+//}
+
+type GetAccountResResource struct {
+	Account *Account `json:"account"`
+}
 
 type Account struct {
-	OwnerAddress   string `json:"owner_address"`
-	AccountAddress string `json:"account_address"`
-	Visible        bool   `json:"visible"`
-	PermissionId   int32  `json:"permission_id"`
+	AccountName     string      `json:"account_name"`
+	Address         string      `json:"address"`
+	Balance         int         `json:"balance"`
+	AccountResource interface{} `json:"account_resource"`
 }
 
 type AccountResource struct {
@@ -33,18 +45,18 @@ type AccountServiceOp struct {
 	client *Client
 }
 
-func (s *AccountServiceOp)Create(account Account) (*Account, error)  {
-	path := fmt.Sprintf("%s", accountBasePath)
+func (s *AccountServiceOp) Create(account Account) (*Account, error) {
+	path := fmt.Sprintf("%s", createAccountBasePath)
 	wrappedData := AccountResource{Account: &account}
 	resource := new(AccountResource)
 	err := s.client.Post(path, wrappedData, resource)
 	return resource.Account, err
 }
 
-func (s *AccountServiceOp)Get(account GetAccountRequest) (*Account, error)  {
-	path := fmt.Sprintf("%s", accountBasePath)
-	wrappedData := GetAccountResource{Account: &account}
-	resource := new(AccountResource)
-	err := s.client.Post(path, wrappedData, resource)
+func (s *AccountServiceOp) Get(account GetAccountRequest) (*Account, error) {
+	path := fmt.Sprintf("%s", getAccountBasePath)
+	//wrappedData := GetAccountResource{Account: &account}
+	resource := new(GetAccountResResource)
+	err := s.client.Post(path, account, resource)
 	return resource.Account, err
 }

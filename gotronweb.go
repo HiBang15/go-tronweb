@@ -17,35 +17,30 @@ import (
 )
 
 const (
-	UserAgent = "goshopify/1.0.0"
-	// UnstableApiVersion Shopify API version for accessing unstable API features
-	UnstableApiVersion = "unstable"
-
-	// Shopify API version YYYY-MM - defaults to admin which uses the oldest stable version of the api
-	defaultApiPathPrefix = "admin"
-	defaultApiVersion    = "stable"
 	defaultHttpTimeout   = 10
 )
 
 type TronWeb struct {
-	FullNode string
-	SolidityNode string
-	EventServer string
-	TronPrivateKey string
+	FullNode       string
+	SolidityNode   string
+	EventServer    string
+	TronProApiKey string `json:"tron_pro_api_key"`
 }
 
 type Client struct {
 	Client *http.Client
-	log LeveledLoggerInterface
+	log    LeveledLoggerInterface
 
-	tronWeb TronWeb
-	baseURL *url.URL
+	tronWeb    TronWeb
+	baseURL    *url.URL
 	pathPrefix string
-	token string
-	retries int
-	attempts int
+	token      string
+	retries    int
+	attempts   int
 
 	RateLimits RateLimitInfo
+
+	Account *AccountServiceOp
 }
 
 type RateLimitInfo struct {
@@ -57,9 +52,9 @@ type RateLimitInfo struct {
 // A general response error that follows a similar layout to Shopify's response
 // errors, i.e. either a single message or a list of messages.
 type ResponseError struct {
-	Status int
+	Status  int
 	Message string
-	Errors []string
+	Errors  []string
 }
 
 // GetStatus returns http  response status
@@ -111,7 +106,7 @@ type RateLimitError struct {
 	RetryAfter int
 }
 
-func (c *Client)NewRequest(method, relPath string, body, options interface{}) (*http.Request, error) {
+func (c *Client) NewRequest(method, relPath string, body, options interface{}) (*http.Request, error) {
 	rel, err := url.Parse(relPath)
 	if err != nil {
 		return nil, err
@@ -133,14 +128,38 @@ func (c *Client)NewRequest(method, relPath string, body, options interface{}) (*
 	}
 
 	req.Header.Add("Content-Type", "application/json")
-	req.Header.Add("Accept", "application/json")
-	req.Header.Add("TRON_PRO_API_KEY", c.tronWeb.TronPrivateKey)
+	//req.Header.Add("Accept", "application/json")
+	req.Header.Add("TRON-PRO-API-KEY", c.tronWeb.TronProApiKey)
 
-	if c.token != "" {
-		req.Header.Add("X-Shopify-Access-Token", c.token)
-	}
+	//if c.tronWeb.TronPrivateKey != "" {
+	//	req.Header.Add("X-Shopify-Access-Token", c.token)
+	//}
 
 	return req, nil
+}
+
+func (tronWeb TronWeb) NewClient(urlPrefix string, token string, web TronWeb) *Client {
+	return NewClient(urlPrefix, token, web)
+}
+
+func NewClient(urlPrefix, token string, web TronWeb) *Client {
+	baseUrl, err := url.Parse(ShopBaseUrl(urlPrefix))
+	if err != nil {
+		panic(err)
+	}
+
+	client := &Client{
+		Client: &http.Client{
+			Timeout: time.Second * defaultHttpTimeout,
+		},
+		log:        &LeveledLogger{},
+		tronWeb:    web,
+		baseURL:    baseUrl,
+		pathPrefix: "",
+	}
+	client.Account = &AccountServiceOp{client: client}
+
+	return client
 }
 
 // Do sends an API request and populates the given interface with the parsed
@@ -220,13 +239,7 @@ func (c *Client) doGetHeaders(req *http.Request, v interface{}) (http.Header, er
 		}
 	}
 
-	if s := strings.Split(resp.Header.Get("X-Shopify-Shop-Api-Call-Limit"), "/"); len(s) == 2 {
-		c.RateLimits.RequestCount, _ = strconv.Atoi(s[0])
-		c.RateLimits.BucketSize, _ = strconv.Atoi(s[1])
-	}
-
-	c.RateLimits.RetryAfterSeconds, _ = strconv.ParseFloat(resp.Header.Get("Retry-After"), 64)
-
+	//c.RateLimits.RetryAfterSeconds, _ = strconv.ParseFloat(resp.Header.Get("Retry-After"), 64)
 	return resp.Header, nil
 }
 

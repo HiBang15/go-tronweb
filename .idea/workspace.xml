@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edf7d8d9-da7f-4ad7-a756-eece279b436f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gotronweb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/account.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/get_account.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gotronweb_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts.go" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotronweb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gotronweb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/logger.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +29,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
   <component name="ProjectId" id="1r6atyJXjK0uAPYxqNcwaH6nw6Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,16 +44,298 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fixtures" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fixtures" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.Test_CreateAccount in go_webtron">
+    <configuration name="Test_CreateAccount in go_webtron (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-tronweb" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_webtron" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_CreateAccount\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_CreateAccount in go_webtron (3)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-tronweb" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_webtron" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_CreateAccount\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_CreateAccount in go_webtron (4)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-tronweb" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_webtron" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_CreateAccount\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_CreateAccount in go_webtron (5)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-tronweb" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_webtron" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_CreateAccount\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_CreateAccount in go_webtron" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-tronweb" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_webtron" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_CreateAccount\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.Test_CreateAccount in go_webtron (5)" />
+        <item itemvalue="Go Test.Test_CreateAccount in go_webtron" />
+        <item itemvalue="Go Test.Test_CreateAccount in go_webtron (4)" />
+        <item itemvalue="Go Test.Test_CreateAccount in go_webtron (3)" />
+        <item itemvalue="Go Test.Test_CreateAccount in go_webtron (2)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
   <component name="WindowStateProjectService">
+    <state width="1058" height="466" key="DebuggerActiveHint" timestamp="1618372568268">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state width="1058" height="466" key="DebuggerActiveHint/0.0.2048.1280@0.0.2048.1280" timestamp="1618372568268" />
+    <state width="2006" height="444" key="GridCell.Tab.0.bottom" timestamp="1618371855921">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state width="2006" height="444" key="GridCell.Tab.0.bottom/0.0.2048.1280@0.0.2048.1280" timestamp="1618371855921" />
+    <state width="2006" height="340" key="GridCell.Tab.0.bottom/0.25.2048.1214@0.25.2048.1214" timestamp="1618309312885" />
+    <state width="2006" height="444" key="GridCell.Tab.0.center" timestamp="1618371855919">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state width="2006" height="444" key="GridCell.Tab.0.center/0.0.2048.1280@0.0.2048.1280" timestamp="1618371855919" />
+    <state width="2006" height="340" key="GridCell.Tab.0.center/0.25.2048.1214@0.25.2048.1214" timestamp="1618309312884" />
+    <state width="2006" height="444" key="GridCell.Tab.0.left" timestamp="1618371855919">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state width="2006" height="444" key="GridCell.Tab.0.left/0.0.2048.1280@0.0.2048.1280" timestamp="1618371855919" />
+    <state width="2006" height="340" key="GridCell.Tab.0.left/0.25.2048.1214@0.25.2048.1214" timestamp="1618309312883" />
+    <state width="2006" height="444" key="GridCell.Tab.0.right" timestamp="1618371855920">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state width="2006" height="444" key="GridCell.Tab.0.right/0.0.2048.1280@0.0.2048.1280" timestamp="1618371855920" />
+    <state width="2006" height="340" key="GridCell.Tab.0.right/0.25.2048.1214@0.25.2048.1214" timestamp="1618309312884" />
+    <state width="2006" height="444" key="GridCell.Tab.1.bottom" timestamp="1618371856062">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state width="2006" height="444" key="GridCell.Tab.1.bottom/0.0.2048.1280@0.0.2048.1280" timestamp="1618371856062" />
+    <state width="2006" height="444" key="GridCell.Tab.1.center" timestamp="1618371856059">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state width="2006" height="444" key="GridCell.Tab.1.center/0.0.2048.1280@0.0.2048.1280" timestamp="1618371856059" />
+    <state width="2006" height="444" key="GridCell.Tab.1.left" timestamp="1618371856058">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state width="2006" height="444" key="GridCell.Tab.1.left/0.0.2048.1280@0.0.2048.1280" timestamp="1618371856058" />
+    <state width="2006" height="444" key="GridCell.Tab.1.right" timestamp="1618371856061">
+      <screen x="0" y="0" width="2048" height="1280" />
+    </state>
+    <state width="2006" height="444" key="GridCell.Tab.1.right/0.0.2048.1280@0.0.2048.1280" timestamp="1618371856061" />
     <state x="725" y="387" width="597" height="490" key="find.popup" timestamp="1618302724844">
       <screen x="0" y="25" width="2048" height="1214" />
     </state>
     <state x="725" y="387" width="597" height="490" key="find.popup/0.25.2048.1214@0.25.2048.1214" timestamp="1618302724844" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/account_test.go</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/account_test.go</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/account_test.go</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/account_test.go</url>
+          <line>27</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/accounts.go</url>
+          <line>58</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/accounts.go</url>
+          <line>59</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>443</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>412</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>420</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>422</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>427</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>431</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>188</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>193</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>200</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>204</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>233</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>242</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>117</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>125</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>137</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>161</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>169</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>425</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>131</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/accounts.go</url>
+          <line>57</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>114</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>110</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb_test.go</url>
+          <line>46</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>118</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>119</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gotronweb.go</url>
+          <line>189</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

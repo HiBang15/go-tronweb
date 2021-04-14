@@ -1,0 +1,4 @@
+# github.com/jarcoal/httpmock v1.0.8
+## explicit
+github.com/jarcoal/httpmock
+github.com/jarcoal/httpmock/internal

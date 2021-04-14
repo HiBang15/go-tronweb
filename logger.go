@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	LevelError = iota +1
+	LevelError = iota + 1
 	LevelWarn
 	LevelInfo
 	LevelDebug
@@ -21,7 +21,7 @@ type LeveledLoggerInterface interface {
 }
 
 type LeveledLogger struct {
-	Level int
+	Level          int
 	stderrOverride io.Writer
 	stdoutOverride io.Writer
 }
